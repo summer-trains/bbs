@@ -123,6 +123,7 @@ public class ArticleController {
 	 * @param pageStart
 	 * @param pageSize
 	 * @return
+	 * my notes----
 	 */
 	@RequestMapping("/getArticleManagement")
 	@ResponseBody
@@ -323,7 +324,7 @@ public class ArticleController {
 	@RequestMapping("/articleStatus")
 	@ResponseBody
 	public Map articleStatus(Article article) {
-		Map<Object,Object> map = new HashMap();
+		Map<Object,Object> map = new HashMap<Object,Object>();
 		try {
 			articleService.updateArticleStatus(article);
 			map.put("resultCode",200);
