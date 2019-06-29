@@ -112,15 +112,21 @@ $(function () {
 
                 /*帖子配图*/
                 if (article["photo"] != "photo"){   //无配图
+                    alert("配图测试");
                     var img_video;
                     if (article["photo"].endsWith(".mp4")||article["photo"].endsWith(".avi")){  //视频
-                        img_video = '<video controls="controls" src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" ' +
+                       // img_video = '<video controls="controls" src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" ' +
+                        //    'style="position: relative; width: 30%; height: 30%;"></video>';
+                        img_video = '<video controls="controls" src="D:/Bbs_Pics/Article/'+article["photo"]+'" ' +
                             'style="position: relative; width: 30%; height: 30%;"></video>';
                     }else {     //图片
-                        img_video = '<img src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'"' +
+                       // img_video = '<img src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'"' +
+                       //     'style="position: relative; width: 30%; height: 30%;">';
+                        img_video = '<img src="D:/Bbs_Pics/Article/'+article["photo"]+'"' +
                             'style="position: relative; width: 30%; height: 30%;">';
                     }
-                    myself_article_photo = '<a href="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" target="_blank">'+img_video+'</a>';
+                    //myself_article_photo = '<a href="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" target="_blank">'+img_video+'</a>';
+                    myself_article_photo = '<a href="D:/Bbs_Pics/Article/'+article["photo"]+'" target="_blank">'+img_video+'</a>';
                 }
 
                 /*修改*/

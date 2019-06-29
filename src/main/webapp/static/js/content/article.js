@@ -211,10 +211,10 @@ function getFid(fid) {
                     '<div class="row">' +
                     '<div class="col-md-12">' +
                     '<a class="bottom_left_aaa a_b" href="#">' +
-                        '<h4>' +
-                        '<!-- 帖子标题 -->' +
-                        '<b id="listArticle_titles">'+listArticle_titles+'</b>' +
-                        '</h4>' +
+                    '<h4>' +
+                    '<!-- 帖子标题 -->' +
+                    '<b id="listArticle_titles">'+listArticle_titles+'</b>' +
+                    '</h4>' +
                     '</a>' +
                     '</div>' +
                     '</div>' +
@@ -355,11 +355,11 @@ function articleDel(fid) {
                             /*修改*/
                             myself_article_update =
                                 '<form id="form_articleUpdate_'+article["fid"]+'">' +
-                                    '<input type="hidden" name="titles" value="'+article["titles"]+'">' +
-                                    '<input type="hidden" name="bname" value="'+article["bname"]+'">' +
-                                    '<input type="hidden" name="fcontent" value="'+article["fcontent"]+'">' +
-                                    '<input type="hidden" name="photo" value="'+article["photo"]+'">' +
-                                    '<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#articleEdit" onclick="setArticleEdit('+article["fid"]+')">修改</button>' +
+                                '<input type="hidden" name="titles" value="'+article["titles"]+'">' +
+                                '<input type="hidden" name="bname" value="'+article["bname"]+'">' +
+                                '<input type="hidden" name="fcontent" value="'+article["fcontent"]+'">' +
+                                '<input type="hidden" name="photo" value="'+article["photo"]+'">' +
+                                '<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#articleEdit" onclick="setArticleEdit('+article["fid"]+')">修改</button>' +
                                 '</form>';
 
                             /*删除*/
@@ -541,69 +541,69 @@ function collectShow(fid) {
 
                 collectArticle_all = collectArticle_all +
                     '<div class="row show_article">' +
-                        '<div class="col-md-12 show_article_go">' +
-                            '<div class="row">' +
-                                '<div class="col-xs-7 col-md-9" style="position: relative; padding-top: 10px;">' +
-                                    '<small>热门内容，来自：<small id="listArticle_bname">'+bname+'</small></small>' +
-                                '</div>' +
-                                '<div class="col-xs-5 col-md-3" style="position: relative; padding-top: 10px;">' +
-                                    '<!-- 时间 -->' +
-                                    '<small id="listArticle_time">'+time+'</small>' +
-                                '</div>' +
-                            '</div>' +
-                            '' +
-                            '<div class="row">' +
-                                '<!-- 头像 -->' +
-                                '<div class="col-xs-2 col-md-1" id="listArticle_userphoto">'+userphoto+'</div>' +
-                                '<!-- 发帖人名字 -->' +
-                                '<div class="col-xs-6 col-md-8" id="listArticle_username">'+username+'</div>' +
-                            '</div>' +
-                            '' +
-                            '<div class="row">' +
-                                '<div class="col-md-12">' +
-                                '<a class="bottom_left_aaa a_b" href="#">' +
-                                    '<h4>' +
-                                    '<!-- 帖子标题 -->' +
-                                    '<b id="listArticle_titles">'+listArticle_titles+'</b>' +
-                                    '</h4>' +
-                                '</a>' +
-                                '</div>' +
-                            '</div>' +
-                            '' +
-                            '<div class="row">' +
-                                '<div class="col-md-12">' +
-                                    '<!-- 帖子内容 -->' +
-                                    '<p id="listArticle_fcontent">'+listArticle_fcontent+'</p>' +
-                                '</div>' +
-                            '</div>' +
-                            '' +
-                            '<div class="row">' +
-                                '<!-- 帖子配图 -->' +
-                                '<div class="col-md-12" id="listArticle_photo">'+listArticle_photo+'</div>' +
-                            '</div>' +
-                            '' +
-                            '<br>' +
-                            '<div class="row" style="position: relative;top: -10px;">' +
-                                '<div class="col-xs-10 col-md-6">' +
-                                    '<div class="col-xs-5 col-md-6">' +
-                                        '<!-- 评论数 -->' +
-                                        '<small id="listArticle_sum">'+listArticle_sum+'</small>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                            '' +
-                            '<!--评论展示-->' +
-                            '<hr style="position: relative; margin-top: 5px;">' +
-                            '<div class="row" style="position: relative; margin-top: -10px;">' +
-                                '<!--评论展示-->' +
-                                '<div class="col-md-12" id="comment_traversals'+article["fid"]+'">'+comment_traversals+'</div>' +
-                            '</div>' +
-                            '' +
-                            '<br>' +
-                            '<div class="row">' +
-                                '<div class="col-md-12" style="position: relative; background-color: #f6f6f6; height: 10px;"></div>' +
-                            '</div>' +
-                        '</div>' +
+                    '<div class="col-md-12 show_article_go">' +
+                    '<div class="row">' +
+                    '<div class="col-xs-7 col-md-9" style="position: relative; padding-top: 10px;">' +
+                    '<small>热门内容，来自：<small id="listArticle_bname">'+bname+'</small></small>' +
+                    '</div>' +
+                    '<div class="col-xs-5 col-md-3" style="position: relative; padding-top: 10px;">' +
+                    '<!-- 时间 -->' +
+                    '<small id="listArticle_time">'+time+'</small>' +
+                    '</div>' +
+                    '</div>' +
+                    '' +
+                    '<div class="row">' +
+                    '<!-- 头像 -->' +
+                    '<div class="col-xs-2 col-md-1" id="listArticle_userphoto">'+userphoto+'</div>' +
+                    '<!-- 发帖人名字 -->' +
+                    '<div class="col-xs-6 col-md-8" id="listArticle_username">'+username+'</div>' +
+                    '</div>' +
+                    '' +
+                    '<div class="row">' +
+                    '<div class="col-md-12">' +
+                    '<a class="bottom_left_aaa a_b" href="#">' +
+                    '<h4>' +
+                    '<!-- 帖子标题 -->' +
+                    '<b id="listArticle_titles">'+listArticle_titles+'</b>' +
+                    '</h4>' +
+                    '</a>' +
+                    '</div>' +
+                    '</div>' +
+                    '' +
+                    '<div class="row">' +
+                    '<div class="col-md-12">' +
+                    '<!-- 帖子内容 -->' +
+                    '<p id="listArticle_fcontent">'+listArticle_fcontent+'</p>' +
+                    '</div>' +
+                    '</div>' +
+                    '' +
+                    '<div class="row">' +
+                    '<!-- 帖子配图 -->' +
+                    '<div class="col-md-12" id="listArticle_photo">'+listArticle_photo+'</div>' +
+                    '</div>' +
+                    '' +
+                    '<br>' +
+                    '<div class="row" style="position: relative;top: -10px;">' +
+                    '<div class="col-xs-10 col-md-6">' +
+                    '<div class="col-xs-5 col-md-6">' +
+                    '<!-- 评论数 -->' +
+                    '<small id="listArticle_sum">'+listArticle_sum+'</small>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '' +
+                    '<!--评论展示-->' +
+                    '<hr style="position: relative; margin-top: 5px;">' +
+                    '<div class="row" style="position: relative; margin-top: -10px;">' +
+                    '<!--评论展示-->' +
+                    '<div class="col-md-12" id="comment_traversals'+article["fid"]+'">'+comment_traversals+'</div>' +
+                    '</div>' +
+                    '' +
+                    '<br>' +
+                    '<div class="row">' +
+                    '<div class="col-md-12" style="position: relative; background-color: #f6f6f6; height: 10px;"></div>' +
+                    '</div>' +
+                    '</div>' +
                     '</div>';
             }
             $("#collectArticle_all").html(collectArticle_all);

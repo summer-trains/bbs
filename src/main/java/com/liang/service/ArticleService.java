@@ -18,6 +18,7 @@ public class ArticleService {
 
 	/**
 	 * 向数据库插入发帖信息
+	 * fre
 	 * @param article
 	 */
 	public void setArticle(Article article) {

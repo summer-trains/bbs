@@ -8,6 +8,7 @@
 <title>帖子展示</title>
 <%
 	pageContext.setAttribute("APP_PATH", request.getContextPath());
+	pageContext.setAttribute("PIC_PATH", "D:\\program files (x86)\\apache-tomcat-7.0.94\\webapps\\ROOT");
 %>
 </head>
 <body>

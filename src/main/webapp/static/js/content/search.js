@@ -1,15 +1,18 @@
-//查询属于该板块下的所有帖子
-function getBid(plateName) {
+//点击按钮函数，使用ajax动态加载博客
+function searchArticle() {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
+    var plateName =document.getElementById("searchcontent").value;   //获取搜索框的值
     alert(plateName);
     $.ajax({
         //几个参数需要注意一下
-        url: "common/getArticleBname/"+plateName ,//url
-        type: "post",//方法类型
+        url: "common/getArticleTitle" ,//url
+        type: "post",//方法类
+        data:{articleTitle:plateName},
         dataType: "json",//预期服务器返回的数据类型
         success: function (data) {
-            alert("success");
+            alert("成功加载！");
+            alert(data);
             var articles_all = "";
             var articles = data["listArticle"];
             //此处进行循环展示-帖子
@@ -217,10 +220,10 @@ function getBid(plateName) {
                         '<div class="row">' +
                         '<div class="col-md-12">' +
                         '<a class="bottom_left_aaa a_b" href="#">' +
-                            '<h4>' +
-                            '<!-- 帖子标题 -->' +
-                            '<b id="listArticle_titles">'+listArticle_titles+'</b>' +
-                            '</h4>' +
+                        '<h4>' +
+                        '<!-- 帖子标题 -->' +
+                        '<b id="listArticle_titles">'+listArticle_titles+'</b>' +
+                        '</h4>' +
                         '</a>' +
                         '</div>' +
                         '</div>' +
@@ -276,8 +279,10 @@ function getBid(plateName) {
             //取消加载更多
             $("#appendMore").html("");
         },
-        error : function() {
+        error : function(arg1) {
+
             layer.msg("异常！",{icon: 5});
+            console.log(arg1)
         }
     });
 }
