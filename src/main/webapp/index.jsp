@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mybbs-首页</title>
 	<%
-		pageContext.setAttribute("APP_PATH", request.getContextPath());
+		//pageContext.setAttribute("APP_PATH", request.getContextPath());
+		pageContext.setAttribute("APP_PATH", request.getRealPath("/"));
 	%>
 	<link href="${APP_PATH }/static/img/favicon.ico" rel='icon' type='image/x-icon'/>
 </head>

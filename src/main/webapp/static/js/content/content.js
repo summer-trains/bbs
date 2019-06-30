@@ -107,10 +107,13 @@ $(function () {
                         var img_video;
                         if (article["photo"].endsWith(".mp4")||article["photo"].endsWith(".avi")){
                             img_video = '<video class="img_content" controls="controls" src=' + APP_PATH + '/static/upload/article/'+article["photo"] + '></video>';
+                            //img_video = '<video class="img_content" controls="controls" src="D:/program files (x86)/apache-tomcat-7.0.94/webapps/ROOT/static/upload/article/'+article["photo"] + '"></video>'
                         }else {
                             img_video = '<img class="img_content" controls="controls" src=' + APP_PATH + '/static/upload/article/'+article["photo"] + '>';
+                            //img_video = '<img class="img_content" controls="controls" src="D:/program files (x86)/apache-tomcat-7.0.94/webapps/ROOT/static/upload/article/'+article["photo"] + '">';
                         }
                         listArticle_photo = '<a href=' + APP_PATH + '/static/upload/article/'+article["photo"] + ' target="_blank">' + img_video + '</a>';
+                        //listArticle_photo = '<a href="D:/program files (x86)/apache-tomcat-7.0.94/webapps/ROOT/static/upload/article/'+article["photo"] + '" target="_blank">' + img_video + '</a>';
                     }
 
                     //评论数
