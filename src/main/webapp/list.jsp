@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>南生论坛-首页</title>
 <%
-	pageContext.setAttribute("APP_PATH", request.getContextPath());
+	//pageContext.setAttribute("APP_PATH", request.getContextPath());
+	//pageContext.setAttribute("APP_PATH", request.getRealPath("/"));
 	//pageContext.setAttribute("PIC_PATH", "D:\\program files (x86)\\apache-tomcat-7.0.94\\webapps\\ROOT");
 	System.out.println(request.getContextPath());
 %>

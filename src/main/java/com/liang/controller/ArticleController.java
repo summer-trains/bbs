@@ -63,8 +63,12 @@ public class ArticleController {
 		System.out.println("项目名称:"+projectname);
 
 		//文件（图片）路径
-		String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
-
+		//修改上传文件路径
+		//String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
+		//String filePath = PathUtil.getCommonPath()+projectname+"/statics/upload/article/";
+		String filePath=PicPaths.PicPath;
+		System.out.println(PathUtil.getCommonPath()+" is common path");
+		System.out.println(projectname+"  is project name");
 		//修改图片存放路径
 		//String filePath=PicPaths.PicPath;
 		//用于存放新生成的文件名字(不重复)
@@ -81,6 +85,8 @@ public class ArticleController {
 			String fileName = file.getOriginalFilename();
 			
 			if(!fileName.equals("")) {
+				//去掉中文字符
+				fileName=subStrForMath(fileName);
 				//生成新的文件名字(不重复)
 				newFileName = UUID.randomUUID() + fileName;
 				System.out.println("文件名称:"+fileName);
@@ -254,6 +260,22 @@ public class ArticleController {
 	 * @return
 	 * @throws IOException 
 	 */
+
+	//去掉字符串中中文字符
+	public String subStrForMath(String str){
+		String string="";
+		for (int i = 0; i < str.length(); i++){
+			String str0="";
+			if (str.substring(i, i + 1).matches("[\u4e00-\u9fa5]+")){
+			}else{
+				str0 = str.substring(i, i + 1) + "";
+			}
+			string +=str0;
+		}
+		return string;
+	}
+
+
 	@RequestMapping("/updateArticle")
 	@ResponseBody
 	public Map updateArticle(@RequestParam("photo") MultipartFile file, Article2 article2,HttpServletRequest request) {
@@ -275,6 +297,13 @@ public class ArticleController {
 
 			// 获取上传图片的文件名及其后缀(获取原始图片的拓展名)
 			String fileName = file.getOriginalFilename();
+
+			//去掉中文字符
+			fileName=subStrForMath(fileName);
+
+			//文件名过短
+			if(fileName.length()<=1)
+				fileName=UUID.randomUUID()+"";
 			// 生成新的文件名字(不重复)
 			String newFileName = UUID.randomUUID() + fileName;
 			// 封装上传文件位置的全路径

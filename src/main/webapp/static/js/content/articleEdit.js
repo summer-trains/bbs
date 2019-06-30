@@ -3,7 +3,7 @@ function setArticleEdit(fid) {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
     var APicPath='<%= session.getAttribute("APicPath")%>';
-    alert(APicPath);
+   // alert(APicPath);
     $.ajax({
         //几个参数需要注意一下
         type: "post",//方法类型
@@ -37,16 +37,16 @@ function setArticleEdit(fid) {
             } else {
                 if (article["photo"].endsWith(".mp4") |article["photo"].endsWith(".avi")){
                     article_Edit_photo =
+                        //'<video style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
+                        //'src="'+'<%= session.getAttribute("APicPath")%>' +article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();"></video>';
                         '<video style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                        'src="'+'<%= session.getAttribute("APicPath")%>' +article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();"></video>';
-                      //  '<video style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                      //  'src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();"></video>';
+                       'src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();"></video>';
                 } else {
                     article_Edit_photo =
-                        '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                         'src="'+ '<%= session.getAttribute("APicPath")%>'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();">';
-                    //   '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                   //     'src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();">';
+                      //  '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
+                      //   'src="'+ '<%= session.getAttribute("APicPath")%>'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();">';
+                       '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
+                        'src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();">';
                 }
             }
 

@@ -11,11 +11,16 @@
     <title>主体内容</title>
     <%
         pageContext.setAttribute("APP_PATH", request.getContextPath());
+        //
     %>
 
     <link href="${APP_PATH}/static/css/css.css" rel="stylesheet">
 </head>
 <body>
+<p>
+    <${APP+PATH} $>
+    app path test
+</p>
 <%-- 方便ajax获取APP_PATH --%>
 <input id="APP_PATH" type="hidden" value="${APP_PATH}" >
 <%-- 方便ajax获取session中的userid --%>
