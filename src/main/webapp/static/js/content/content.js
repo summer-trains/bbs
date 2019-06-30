@@ -360,6 +360,7 @@ $(function () {
             };
             myCharts1.setOption(option);
 
+            <!-- fve-->
             //统计访问信息-中国省份
             var visitProvinces = data["visitProvinceCount"];
             var provinces = new Array();//地址
