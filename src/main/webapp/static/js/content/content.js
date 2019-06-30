@@ -56,10 +56,10 @@ $(function () {
                     userphoto = '<a href=' + APP_PATH + '/userController/getOthers?userid=' + article["userid"] + '>' + head_png + '</a>';
 
                     username = '<a class="a_b" href=' + APP_PATH + '/userController/getOthers?userid=' + article["userid"] + '>' +
-                                    '<h5 class="bottom_left_name">' +
-                                    '<b>' + article["username"] + '</b>' +
-                                    '</h5>' +
-                                '</a>';
+                        '<h5 class="bottom_left_name">' +
+                        '<b>' + article["username"] + '</b>' +
+                        '</h5>' +
+                        '</a>';
 
                     //用户登录后才显示关注按钮 && 如果是登录用户本人，则不显示关注按钮
                     if (userid != "" && article["userid"] != userid) {
@@ -73,13 +73,13 @@ $(function () {
                             if (attention["userid"] == userid && attention["beuserid"] == article["userid"]) {
                                 form_attention =
                                     '<form id="form_attentionDel_'+article["fid"]+'" method="post">' +
-                                        '<input type="hidden" name="gid" value=' + attention["gid"] + '>' +
-                                        '<div class="attention_content">' +
-                                            '<a href="javascript:void(0)">' +
-                                                '<button type="button" onclick="attentionDel('+article["fid"]+","+article["userid"]+","+userid+')" class="btn button2" style="width:80px;">取消关注</button>' +
-                                                '<button type="button" onclick="attentionDel('+article["fid"]+","+article["userid"]+","+userid+')" class="btn" style="width:80px;">已关注</button>' +
-                                            '</a>' +
-                                        '</div>' +
+                                    '<input type="hidden" name="gid" value=' + attention["gid"] + '>' +
+                                    '<div class="attention_content">' +
+                                    '<a href="javascript:void(0)">' +
+                                    '<button type="button" onclick="attentionDel('+article["fid"]+","+article["userid"]+","+userid+')" class="btn button2" style="width:80px;">取消关注</button>' +
+                                    '<button type="button" onclick="attentionDel('+article["fid"]+","+article["userid"]+","+userid+')" class="btn" style="width:80px;">已关注</button>' +
+                                    '</a>' +
+                                    '</div>' +
                                     '</form>';
                                 //当该用户被关注时，给attention_record赋值“true”
                                 attention_record = true;
@@ -89,11 +89,11 @@ $(function () {
                         if (attention_record == false) {
                             form_attention =
                                 '<form id="form_attentionAdd_'+article["fid"]+'" method="post">' +
-                                    '<input type="hidden" name="userid" value="' + userid + '">' +
-                                    '<input type="hidden" name="beuserid" value="' + article["userid"] + '">' +
-                                    '<button type="button" onclick="attentionAdd('+article["fid"]+","+article["userid"]+","+userid+')" class="btn btn-info btn-sm">' +
-                                        '<samp class="glyphicon glyphicon-plus"></samp> 关注她' +
-                                    '</button>' +
+                                '<input type="hidden" name="userid" value="' + userid + '">' +
+                                '<input type="hidden" name="beuserid" value="' + article["userid"] + '">' +
+                                '<button type="button" onclick="attentionAdd('+article["fid"]+","+article["userid"]+","+userid+')" class="btn btn-info btn-sm">' +
+                                '<samp class="glyphicon glyphicon-plus"></samp> 关注她' +
+                                '</button>' +
                                 '</form>';
                         }
                     }
@@ -128,10 +128,10 @@ $(function () {
                             if (collect["userid"] == userid && collect["fid"]==article["fid"]){
                                 form_collect =
                                     '<form id="form_collectDel_'+article["fid"]+'" method="post">' +
-                                        '<input type="hidden" name="sid" value="'+collect["sid"]+'">' +
-                                        '<button type="button" style="border: none;background-color: #ffffff;" onclick="collectDel('+article["fid"]+","+userid+')">' +
-                                            '<samp title="取消收藏" class="glyphicon glyphicon-heart collect_end"></samp>' +
-                                        '</button>' +
+                                    '<input type="hidden" name="sid" value="'+collect["sid"]+'">' +
+                                    '<button type="button" style="border: none;background-color: #ffffff;" onclick="collectDel('+article["fid"]+","+userid+')">' +
+                                    '<samp title="取消收藏" class="glyphicon glyphicon-heart collect_end"></samp>' +
+                                    '</button>' +
                                     '</form>';
                                 // 当该用户被收藏时，给attention_record赋值“true”
                                 collect_record = true;
@@ -144,7 +144,7 @@ $(function () {
                                 '<input type="hidden" name="userid" value="'+userid+'">' +
                                 '<input type="hidden" name="fid" value="'+article["fid"]+'">' +
                                 '<button type="button" style="border: none;background-color: #ffffff;" onclick="collectAdd('+article["fid"]+","+userid+')">' +
-                                    '<samp title="收藏该帖子" class="glyphicon glyphicon-heart collect_start"></samp>' +
+                                '<samp title="收藏该帖子" class="glyphicon glyphicon-heart collect_start"></samp>' +
                                 '</button>' +
                                 '</form>';
                         }
@@ -159,14 +159,14 @@ $(function () {
                         // 评论框
                         comment_box =
                             '<form id="form_commentAdd_'+article["fid"]+'">' +
-                                '<div class="col-xs-10 col-md-11">' +
-                                    '<input type="hidden" name="userid" value="'+userid+'">' +
-                                    '<input type="hidden" name="fid" value="'+article["fid"]+'">' +
-                                    '<input type="text" class="form-control" id="pcontent_'+article["fid"]+'" name="pcontent" placeholder="写下你的评论..." required>' +
-                                '</div>' +
-                                '<div class="col-xs-2 col-md-1">' +
-                                    '<button type="button" class="btn btn-primary" style="position: relative; left: -25px;" onclick="commentAdd('+article["fid"]+')">评论</button>' +
-                                '</div>' +
+                            '<div class="col-xs-10 col-md-11">' +
+                            '<input type="hidden" name="userid" value="'+userid+'">' +
+                            '<input type="hidden" name="fid" value="'+article["fid"]+'">' +
+                            '<input type="text" class="form-control" id="pcontent_'+article["fid"]+'" name="pcontent" placeholder="写下你的评论..." required>' +
+                            '</div>' +
+                            '<div class="col-xs-2 col-md-1">' +
+                            '<button type="button" class="btn btn-primary" style="position: relative; left: -25px;" onclick="commentAdd('+article["fid"]+')">评论</button>' +
+                            '</div>' +
                             '</form>';
                     }
 
@@ -213,10 +213,10 @@ $(function () {
                         '<div class="row">' +
                         '<div class="col-md-12">' +
                         '<a class="bottom_left_aaa a_b" href="#">' +
-                            '<h4>' +
-                            '<!-- 帖子标题 -->' +
-                            '<b id="listArticle_titles" onclick=getFid("'+article["fid"]+'")>'+listArticle_titles+'</b>' +
-                            '</h4>' +
+                        '<h4>' +
+                        '<!-- 帖子标题 -->' +
+                        '<b id="listArticle_titles" onclick=getFid("'+article["fid"]+'")>'+listArticle_titles+'</b>' +
+                        '</h4>' +
                         '</a>' +
                         '</div>' +
                         '</div>' +
@@ -291,10 +291,10 @@ $(function () {
                 }
                 plates_all = plates_all +
                     '<div class="col-xs-4 col-md-4">' +
-                        '<a href="#" onclick=getBid("'+plate["bname"]+'") >' +
-                            '<img class="img_right_logo_bankuai" src="' + APP_PATH + '/static/img/houtai.png">' +
-                            '<p>'+plate["bname"]+'</p>' +
-                        '</a>' +
+                    '<a href="#" onclick=getBid("'+plate["bname"]+'") >' +
+                    '<img class="img_right_logo_bankuai" src="' + APP_PATH + '/static/img/houtai.png">' +
+                    '<p>'+plate["bname"]+'</p>' +
+                    '</a>' +
                     '</div>' + br;
                 $("#plates_all").html(plates_all);
             }
@@ -309,10 +309,10 @@ $(function () {
                 if (article["status"] == 1 && article["sum"]>1){
                     hotArticle_all = hotArticle_all +
                         '<div class="row">' +
-                            '<div class="col-md-12">' +
-                                '<a href="#" onclick=getFid("'+article["fid"]+'") >'+article["titles"]+'</a>' +
-                            '</div>' +
-                            '<div class="col-md-12"><br></div>' +
+                        '<div class="col-md-12">' +
+                        '<a href="#" onclick=getFid("'+article["fid"]+'") >'+article["titles"]+'</a>' +
+                        '</div>' +
+                        '<div class="col-md-12"><br></div>' +
                         '</div>';
                 }
             }

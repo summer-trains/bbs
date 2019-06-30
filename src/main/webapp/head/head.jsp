@@ -40,13 +40,15 @@
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="${APP_PATH}/index.jsp">首页 <span class="sr-only">(current)</span></a></li>
 					</ul>
-					<form class="navbar-form navbar-left" action="${APP_PATH }/common/getArticleTitle" method="post">
+					<!--form class="navbar-form navbar-left" action="${APP_PATH }/common/getArticleTitle" method="post"-->
+					<!--form class="navbar-form navbar-left" action="${APP_PATH }/articleController/getArticleTitle" method="post"-->
+					<form class="navbar-form navbar-left" action=javascript:void(0) method="post">
 						<div class="row">
 							<div class="col-xs-9 col-md-8">
-								<input type="text" name="articleTitle" class="form-control" placeholder="输入收索内容..." required>
+								<input type="text" name="articleTitle" id="searchcontent" class="form-control" placeholder="输入收索内容..." required>
 							</div>
 							<div class="col-xs-3 col-md-4">
-								<button type="submit" class="btn btn-primary">搜索</button>
+								<button type="submit" onclick="searchArticle()" class="btn btn-primary">搜索</button>
 							</div>
 						</div>
 					</form>
@@ -120,7 +122,8 @@
 		</div>
 	</div>
 	</nav>
-	
+
+	<script src="${APP_PATH }/static/js/content/search.js"></script>
 	<script src="${APP_PATH }/static/js/phones_pc.js"></script>
 	<script src="${APP_PATH}/static/js/jquery-3.3.1.min.js"></script>
 	<script src="${APP_PATH}/static/bootstrap/js/bootstrap.js"></script>

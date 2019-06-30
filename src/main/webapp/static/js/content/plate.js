@@ -2,12 +2,14 @@
 function getBid(plateName) {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
+    alert(plateName);
     $.ajax({
         //几个参数需要注意一下
         url: "common/getArticleBname/"+plateName ,//url
         type: "post",//方法类型
         dataType: "json",//预期服务器返回的数据类型
         success: function (data) {
+            alert("success");
             var articles_all = "";
             var articles = data["listArticle"];
             //此处进行循环展示-帖子

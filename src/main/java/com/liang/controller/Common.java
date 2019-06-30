@@ -169,10 +169,15 @@ public class Common {
 	 * @return
 	 */
 	@RequestMapping("/getArticleTitle")
-	public String getArticleTitle(HttpServletRequest request, Map<Object, Object> map, Map<Object, Object> map2) {
+	@ResponseBody
+	//public Map getArticleTitle(HttpServletRequest request, Map<Object, Object> map, Map<Object, Object> map2) {
+	public Map getArticleTitle(HttpServletRequest request) {
 
+		Map<Object, Object> map = new HashMap<Object, Object>();
+		Map<Object, Object> map2 = new HashMap<Object, Object>();
 		articleController.getArticleTitle(request.getParameter("articleTitle"), map);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");
+
 		int count = listArticle.size();
 
 		for (int i = 0; i < count; i++) {
@@ -196,8 +201,8 @@ public class Common {
 		// 查询板块信息（无条件）
 		List<Plate> plate = plateService.getPlate();
 		map.put("plate", plate);
-
-		return "list";
+		System.out.println("完成查询，准备返回");
+		return map;
 	}
 
 	/**
@@ -209,6 +214,7 @@ public class Common {
 	@RequestMapping("/getArticleBname/{bname}")
 	@ResponseBody
 	public Map getArticleBname(@PathVariable String bname, HttpServletRequest request) {
+		System.out.println("进入板块查询主层");
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		articleController.getArticleBname(bname, map);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");

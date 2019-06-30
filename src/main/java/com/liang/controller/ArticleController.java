@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+//引入文件路径类
+import PicPath.PicPaths;
+
 import com.liang.utils.PathUtil;
 
 @RequestMapping("/articleController")
@@ -61,6 +64,9 @@ public class ArticleController {
 
 		//文件（图片）路径
 		String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
+
+		//修改图片存放路径
+		//String filePath=PicPaths.PicPath;
 		//用于存放新生成的文件名字(不重复)
 		String newFileName = "photo";
 		
@@ -123,6 +129,7 @@ public class ArticleController {
 	 * @param pageStart
 	 * @param pageSize
 	 * @return
+	 * my notes----
 	 */
 	@RequestMapping("/getArticleManagement")
 	@ResponseBody
@@ -157,10 +164,13 @@ public class ArticleController {
 	 * @param articleTitle
 	 * @param map
 	 */
-	public void getArticleTitle(String articleTitle,Map<Object, Object> map) {
-		
+	//@RequestMapping("/getArticleTitle")
+	public Map getArticleTitle(String articleTitle,Map<Object, Object> map) {
+		System.out.println("you click searches......."+articleTitle);
 		List<Article> listArticle = articleService.getArticleTitle(articleTitle);
 		map.put("listArticle", listArticle);
+		System.out.println(listArticle.get(0).getTitles());
+		return map;
 	}
 	
 	/**
@@ -168,10 +178,11 @@ public class ArticleController {
 	 * @param bname
 	 * @param map
 	 */
-	public void getArticleBname(String bname, Map<Object, Object> map) {
-		
+	public Map getArticleBname(String bname, Map<Object, Object> map) {
+		System.out.println("search all plates..........");
 		List<Article> listArticle = articleService.getArticleBname(bname);
 		map.put("listArticle", listArticle);
+		return map;
 	}
 	
 
@@ -323,7 +334,7 @@ public class ArticleController {
 	@RequestMapping("/articleStatus")
 	@ResponseBody
 	public Map articleStatus(Article article) {
-		Map<Object,Object> map = new HashMap();
+		Map<Object,Object> map = new HashMap<Object,Object>();
 		try {
 			articleService.updateArticleStatus(article);
 			map.put("resultCode",200);
