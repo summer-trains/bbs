@@ -10,12 +10,48 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/content/content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/content/content.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/content/articleEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/content/articleEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/content/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/content/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/content/mycontent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/content/mycontent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/controller/ViaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/controller/ViaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Article2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Article2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Attention.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Attention.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Collect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Collect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Plate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Plate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Via.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Via.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/bean/Visit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/bean/Visit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/AttentionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/AttentionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/CollectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/CollectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/Common.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/Common.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/PlateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/PlateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/ViaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/ViaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/controller/VisitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/controller/VisitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/AdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/ArticleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/AttentionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/AttentionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/CollectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/CollectMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/CommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/PlateMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/PlateMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/ViaMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/ViaMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/dao/VisitMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/dao/VisitMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/AttentionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/AttentionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/CollectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/CollectService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/PlateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/PlateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/ViaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/ViaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/service/VisitService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/service/VisitService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/test/MBGTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/test/MBGTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/utils/PathUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/utils/PathUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liang/utils/PropertyUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liang/utils/PropertyUtil.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +64,7 @@
     <session id="20557967">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.48" value="1" />
@@ -36,29 +72,30 @@
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.87" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="42" />
-          <entry key="js" value="17" />
-          <entry key="jsp" value="35" />
+          <entry key="java" value="46" />
+          <entry key="js" value="20" />
+          <entry key="jsp" value="37" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="42" />
-          <entry key="JSP" value="35" />
-          <entry key="JavaScript" value="17" />
+          <entry key="JAVA" value="46" />
+          <entry key="JSP" value="37" />
+          <entry key="JavaScript" value="20" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1283" />
+          <entry key="java" value="1706" />
           <entry key="js" value="607" />
           <entry key="jsp" value="354" />
           <entry key="txt" value="33" />
@@ -67,7 +104,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1283" />
+          <entry key="JAVA" value="1706" />
           <entry key="JSP" value="354" />
           <entry key="JavaScript" value="607" />
           <entry key="PLAIN_TEXT" value="33" />
@@ -86,47 +123,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/content/content.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/articleEdit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4513">
-              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#video#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#2;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#p#3;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#video#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#279#285#0" expanded="true" />
-                <element signature="e#285#291#0" expanded="true" />
-                <element signature="e#291#297#0" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/mycontent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2062">
-              <caret line="128" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
@@ -167,32 +168,69 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/ArticleController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+            <state relative-caret-position="2584">
+              <caret line="136" column="41" selection-start-line="136" selection-start-column="41" selection-end-line="136" selection-end-column="41" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#a#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="e#79#85#0" expanded="true" />
+                <element signature="e#85#91#0" expanded="true" />
+                <element signature="e#91#97#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/userEdit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+            <state relative-caret-position="-570" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/ViaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="139" column="45" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/Common.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/content/userPhoto.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="188" column="44" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
+            <state relative-caret-position="-433" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/ArticleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="275" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,8 +241,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="108" column="131" lean-forward="true" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="131" />
+            <state relative-caret-position="161">
+              <caret line="108" column="131" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="131" />
             </state>
           </provider>
         </entry>
@@ -250,8 +288,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/content/content.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/content/articleEdit.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/content/mycontent.js" />
-        <option value="$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liang/controller/ViaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java" />
       </list>
     </option>
   </component>
@@ -452,7 +491,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561865680545" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561907330912" />
     <property name="last_opened_file_path" value="D:/static" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -569,7 +608,8 @@
       <workItem from="1561767262609" duration="6858000" />
       <workItem from="1561783001346" duration="27571000" />
       <workItem from="1561853813937" duration="4769000" />
-      <workItem from="1561870403464" duration="6005000" />
+      <workItem from="1561870403464" duration="6669000" />
+      <workItem from="1561904717848" duration="2601000" />
     </task>
     <task id="LOCAL-00001" summary="origin-version">
       <created>1561730452872</created>
@@ -592,11 +632,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561819566158</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="search_checked">
+      <created>1561881199525</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561881199525</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56009000" />
+    <option name="totallyTimeSpent" value="59274000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -611,7 +658,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8319871" visible="true" weight="0.22995462" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8319871" visible="true" weight="0.23373677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -621,7 +668,7 @@
       <window_info id="Web" order="7" sideWeight="0.50240386" side_tool="true" weight="0.24962178" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.32956383" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990307" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -682,29 +729,16 @@
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/liang/controller/ViaController.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1311" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/bean/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/content.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2398">
@@ -722,16 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="24" column="68" lean-forward="true" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-          <folding>
-            <element signature="e#1335#1352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/mycontent.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -760,13 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3074">
           <caret line="49" column="74" lean-forward="true" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2394">
-          <caret line="234" column="48" lean-forward="true" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -925,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="136" column="41" selection-start-line="136" selection-start-column="41" selection-end-line="136" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -948,6 +958,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/content/articleEdits.jsp">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/content.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/articleEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/Common.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-832">
+          <caret line="188" column="44" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/mycontent.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1825">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/article.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -993,42 +1044,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/content.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="-6242">
+          <caret line="234" column="48" lean-forward="true" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/articleEdit.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/userEdit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4513">
-          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+        <state relative-caret-position="-570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/ViaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="139" column="45" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="108" column="131" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="275" selection-end-column="5" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#video#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#2;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#p#3;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#video#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#279#285#0" expanded="true" />
-            <element signature="e#285#291#0" expanded="true" />
-            <element signature="e#291#297#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/userPhoto.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2584">
+          <caret line="136" column="41" selection-start-line="136" selection-start-column="41" selection-end-line="136" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#a#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="e#79#85#0" expanded="true" />
+            <element signature="e#85#91#0" expanded="true" />
+            <element signature="e#91#97#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/mycontent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2062">
-          <caret line="128" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
+        <state relative-caret-position="323">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
@@ -1064,50 +1155,6 @@
             <element signature="n#style#0;n#b#0;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/content/content.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="108" column="131" lean-forward="true" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PicPath/PicPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/Common.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="188" column="44" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

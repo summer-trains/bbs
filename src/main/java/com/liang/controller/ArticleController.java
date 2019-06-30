@@ -345,7 +345,10 @@ public class ArticleController {
 		}
 
 		//文件（图片）路径
-		String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
+		//String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
+
+		//修改后的文件路径
+		String filePath=PicPaths.PicPath;
 		
 		// 获取取要删除帖子对应的图片的文件名（通过fid获取帖子信息）
 		String fileName = articleService.getArticleKey(fid).getPhoto();
