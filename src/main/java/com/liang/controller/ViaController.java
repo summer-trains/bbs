@@ -9,6 +9,7 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import PicPath.PicPaths;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +27,22 @@ public class ViaController {
 
 	@Autowired
 	ViaService viaService;
-	
+
+
+	//去掉字符串中中文字符
+	public String subStrForMath(String str){
+		String string="";
+		for (int i = 0; i < str.length(); i++){
+			String str0="";
+			if (str.substring(i, i + 1).matches("[\u4e00-\u9fa5]+")){
+			}else{
+				str0 = str.substring(i, i + 1) + "";
+			}
+			string +=str0;
+		}
+		return string;
+	}
+
 	/**
 	 * 上传用户头像（插入、修改）
 	 * @param file
@@ -50,10 +66,14 @@ public class ViaController {
 			}
 
 			//文件（图片）路径
-			String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getUserPath();
+			//String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getUserPath();
+
+			//修改后的图片路径
+			String filePath= PicPaths.UserPicPath;
 
 			//用于存放新生成的文件名字(不重复)
 			String newFileName = null;
+
 			//肯定报错啊，int=null,,但是只有登录的时候才能进入该页面，故不用判断是否登录
 			int userid=(int)(Integer) session.getAttribute("userid");
 			Via via=new Via();
@@ -61,6 +81,11 @@ public class ViaController {
 
 			// 获取上传图片的文件名及其后缀(获取原始图片的拓展名)
 			String fileName = file.getOriginalFilename();
+			fileName=subStrForMath(fileName);
+
+			//文件名长度过小
+			if(fileName.length()<=1)
+				fileName=UUID.randomUUID()+"";
 
 			//如果该用户还没有上传过头像，则进行新增操作
 			if (viaService.getVia(userid)==null) {
@@ -68,6 +93,8 @@ public class ViaController {
 				//选择了头像的情况下
 				if(!fileName.equals("")) {
 					//生成新的文件名字(不重复)
+					//去掉中文字符
+
 					newFileName = UUID.randomUUID() + fileName;
 					// 封装上传文件位置的全路径
 					File targetFile = new File(filePath, newFileName);
@@ -89,7 +116,7 @@ public class ViaController {
 					String fileNameNew = viaService.getVia(userid).getPhoto();
 					// 封装上传文件位置的全路径
 					File targetFile = new File(filePath, fileNameNew);
-					System.out.println("封装上传文件位置的全路径:"+targetFile);
+					System.out.println("删除原头像文件位置的全路径:"+targetFile);
 					//删除帖子对应的图片（实际删除）
 					targetFile.delete();
 
@@ -97,6 +124,7 @@ public class ViaController {
 					newFileName = UUID.randomUUID() + fileName;
 					// 封装上传文件位置的全路径
 					targetFile = new File(filePath, newFileName);
+					System.out.println("保存上传头像文件位置的全路径:"+targetFile);
 					// 把本地文件上传到封装上传文件位置
 					file.transferTo(targetFile);
 
@@ -109,6 +137,7 @@ public class ViaController {
 			map.put("resultCode",200);
 		}catch (Exception e){
 			map.put("resultCode",404);
+			System.out.println(e.getMessage());
 		}
 		
 		return map;

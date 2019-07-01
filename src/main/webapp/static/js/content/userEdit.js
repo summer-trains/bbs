@@ -1,3 +1,4 @@
+//编辑用户有关函数
 //编辑头像-展示
 function userPhotoShow() {
     var APP_PATH = document.getElementById("APP_PATH").value;

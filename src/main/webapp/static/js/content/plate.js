@@ -1,4 +1,6 @@
+//板块的js函数，包括板块显示，板块点击事件（点击某个板块后显示对应文章）
 //查询属于该板块下的所有帖子
+
 function getBid(plateName) {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;

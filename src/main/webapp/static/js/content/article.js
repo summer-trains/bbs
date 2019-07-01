@@ -1,4 +1,4 @@
-//展示热门帖子
+//展示热门帖子有关函数
 function getFid(fid) {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
