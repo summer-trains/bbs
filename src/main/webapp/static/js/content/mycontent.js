@@ -1,4 +1,4 @@
-//个人主页展示
+//个人主页展示 js函数，包括完整的首页展示代码
 $(function () {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
@@ -112,7 +112,6 @@ $(function () {
 
                 /*帖子配图*/
                 if (article["photo"] != "photo"){   //无配图
-                    alert("配图测试");
                     var img_video;
                     if (article["photo"].endsWith(".mp4")||article["photo"].endsWith(".avi")){  //视频
                         img_video = '<video controls="controls" src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" ' +

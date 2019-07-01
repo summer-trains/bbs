@@ -1,3 +1,4 @@
+//评论有关函数
 //评论-新增
 function commentAdd(fid) {
     var APP_PATH = document.getElementById("APP_PATH").value;
