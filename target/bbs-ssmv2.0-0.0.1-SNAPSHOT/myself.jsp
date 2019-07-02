@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <!--导入jstl核心库
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,7 +33,9 @@
 <%! String sense=""; %>
 <%
 	//发帖后转到该界面，进行敏感词提醒
-	sense=(String)request.getSession().getAttribute("SenseWord");
+	//首先应该判断是否为空，否则会出错
+	if(request.getSession().getAttribute("senseWord")!=null)
+		sense=(String)request.getSession().getAttribute("SenseWord");
 	if(!sense.equals("")){
 		sense="你的文章中含有敏感字符，已交给管理员审核:\n "+sense;
 %>

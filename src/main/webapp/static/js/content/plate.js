@@ -5,10 +5,15 @@ function getBid(plateName) {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
     alert(plateName);
+
+    //对查询字符进行编码
+    var searchText = encodeURI(plateName);
     $.ajax({
         //几个参数需要注意一下
-        url: "common/getArticleBname/"+plateName ,//url
+        //url: "common/getArticleBname/"+searchText ,//url
+        url: "common/getArticleBname",
         type: "post",//方法类型
+        data:{plateName:plateName},
         dataType: "json",//预期服务器返回的数据类型
         success: function (data) {
             alert("success");

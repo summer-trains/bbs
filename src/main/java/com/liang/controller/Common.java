@@ -1,6 +1,7 @@
 package com.liang.controller;
 
 import java.net.InetAddress;
+import java.net.URLDecoder;
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,7 @@ import com.liang.bean.Collect;
 import com.liang.bean.Comment;
 import com.liang.bean.Plate;
 import com.liang.utils.PathUtil;
+
 
 @RequestMapping("/common")
 @SessionAttributes(value = { "plate", "sessionIp" })
@@ -211,10 +213,21 @@ public class Common {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping("/getArticleBname/{bname}")
+	//@RequestMapping("/getArticleBname/{bname}")
+	@RequestMapping("/getArticleBname")
 	@ResponseBody
-	public Map getArticleBname(@PathVariable String bname, HttpServletRequest request) {
-		System.out.println("进入板块查询主层");
+	//public Map getArticleBname(@PathVariable String bname, HttpServletRequest request) {
+	public Map getArticleBname(HttpServletRequest request) {
+		String bname=request.getParameter("plateName");
+		System.out.println("进入板块查询主层:"+bname);
+		System.out.println("对板块名进行解码");
+
+		try {
+			//bname = URLDecoder.decode(bname, "UTF-8");
+		}catch (Exception e){
+			System.out.println("解码字符时出现问题："+e.getMessage());
+		}
+		//System.out.println("解码后字符串:"+bname);
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		articleController.getArticleBname(bname, map);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");
