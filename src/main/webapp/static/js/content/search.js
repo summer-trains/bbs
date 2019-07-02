@@ -74,6 +74,7 @@ function searchArticle() {
                         var attention_record = false;
                         var attentions = data["attention"];
                         // 遍历关注表信息
+                        if("undefined"!=typeof attentions)
                         for (var j = 0; j < attentions.length; j++) {
                             var attention = attentions[j];
                             //判断该帖子对应的用户是否被关注，如果是，则将“true”保存到"attention_record"中
@@ -129,6 +130,8 @@ function searchArticle() {
                         var collect_record = false;
                         // 遍历收藏表信息
                         var collects = data["collect"];
+
+                        if("undefined"!=typeof collects)
                         for (var j = 0; j < collects.length; j++){
                             var collect = collects[j];
                             // 判断该帖子是否被收藏，如果是，则将“true”保存到"collect_record"中
