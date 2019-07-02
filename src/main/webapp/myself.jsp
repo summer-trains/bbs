@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<!--导入jstl核心库
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,5 +31,22 @@
 	<jsp:include page="/content/articleEdits.jsp"></jsp:include>
 	<!-- 我的主页-收藏帖子展示 -->
 	<jsp:include page="/content/collectArticle.jsp"></jsp:include>
+<%! String sense=""; %>
+<%
+	//发帖后转到该界面，进行敏感词提醒
+	sense=(String)request.getSession().getAttribute("SenseWord");
+	if(!sense.equals("")){
+		sense="你的文章中含有敏感字符，已交给管理员审核:\n "+sense;
+%>
+<input type="hidden" id="sensetive" value="<%=sense%>" >
+<script>alert(document.getElementById("sensetive").value)</script>;
+<script>alert("${"SenseWord"}")</script>;
+<%
+		request.setAttribute("SenseWord","");
+	}
+	else {
+		//out.print("<script>alert(\"你的文章很好:\n"+sense+"\")</script>");
+	}
+%>
 </body>
 </html>

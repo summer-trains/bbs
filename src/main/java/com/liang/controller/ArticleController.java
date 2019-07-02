@@ -2,17 +2,17 @@ package com.liang.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.liang.bean.*;
 import com.liang.service.*;
+import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import PicPath.PicPaths;
 
 import com.liang.utils.PathUtil;
+import word_filter.WordDetect;
 
 @RequestMapping("/articleController")
 @SessionAttributes(value= {"article_Edit"})
@@ -51,7 +52,18 @@ public class ArticleController {
 	//有MultipartFile file的时候不能有 Article article，因为Article中包含了文件（file）????!!!
 	public String setArticle(@RequestParam("photo") MultipartFile file, Article2 article2, HttpSession session,HttpServletRequest request)
 			throws IOException {
-		
+
+		//验证是否含有敏感词汇
+		String contentText=article2.getFcontent();		//获取评论内容
+		Set<String> sensiWord= WordDetect.getBadWord(contentText,2);		//最大匹配规则获取敏感词
+		Iterator<String> iterator=sensiWord.iterator();
+
+		String Sense="";
+		//获取敏感词
+		while(iterator.hasNext()){
+			Sense=Sense+" ; "+iterator.next();
+		}
+
 		String projectname;	//项目名称
 		projectname = request.getSession().getServletContext().getRealPath("/");
 		projectname=projectname.substring(0,projectname.length()-1);
@@ -75,6 +87,7 @@ public class ArticleController {
 		String newFileName = "photo";
 		
 		String username=(String) session.getAttribute("username");
+		Article article=null;
 		//用户登录情况下才可发帖
 		if(username!=null) {
 			
@@ -100,16 +113,29 @@ public class ArticleController {
 			}
 			
 			// 将article2和photo整合到article中
-			Article article = new Article(article2, newFileName);
+			article = new Article(article2, newFileName);
 
 			article.setUserid(userid);
 			article.setUsername(username);
 			article.setStatus(0);
 
 			// 将article保存到数据库
-			articleService.setArticle(article);
 		}
-		
+
+		//不包含任何敏感词汇
+		if(Sense.equals("")){
+			System.out.println("文章不含敏感词汇");
+			article.setStatus(1);
+			request.getSession().setAttribute("SenseWord","");
+		}
+		else{
+			//设置敏感词汇属性
+			request.getSession().setAttribute("SenseWord",Sense);
+
+			article.setStatus(0);
+		}
+		//保存到数据库
+		articleService.setArticle(article);
 		return "redirect:/myself.jsp";//重定向
 	}
 

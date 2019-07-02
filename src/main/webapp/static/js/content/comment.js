@@ -26,8 +26,10 @@ function commentAdd(fid) {
                             var comment = comments[j];
                             comment_traversals = comment_traversals +
                                 '<a class="a_p" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
+                                //修改了评论者姓名
                                 '<!-- 评论者姓名 -->' +
                                 '<b>'+comment["name"]+'</b>' +
+                                //comment["name"]+
                                 '</a>' +
                                 '&nbsp;&nbsp;&nbsp;' +
                                 '<!-- 时间 -->' +
@@ -85,6 +87,7 @@ function commentDel(fid,pid) {
                                         '<a href="'+ APP_PATH +'/userController/getOthers?userid='+comment["userid"]+'" class="a_p">' +
                                         '<!-- 评论者姓名 -->' +
                                         '<b>'+comment["name"]+'</b>' +
+                                        //comment["name"]+
                                         '</a>' +
                                         '&nbsp;&nbsp;&nbsp;' +
                                         '<small>'+comment["time"]+'</small>' +
@@ -152,6 +155,7 @@ function huifuCommentDel(fid,pid) {
                                 '<a href="'+APP_PATH+'/userController/getOthers?userid='+huifu_comment["userid"]+'" class="a_p">' +
                                 '<!-- 评论者姓名 -->' +
                                 '<b>'+huifu_comment["name"]+'</b>' +
+                                //huifu_comment["name"]+
                                 '</a>' +
                                 '&nbsp;&nbsp;&nbsp;' +
                                 '<!-- 时间 -->' +

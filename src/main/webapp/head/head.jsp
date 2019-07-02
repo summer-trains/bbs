@@ -63,6 +63,7 @@
 						<c:if test="${!empty username}">
 							<li>
 								<a href="Javascript:void(0)" data-toggle="modal" data-target="#faTie" onclick="postedShow()">发帖</a>
+								<!--a href="${APP_PATH }/head/posted.jsp" >发帖</a-->
 							</li>
 							<!-- pc -->
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
