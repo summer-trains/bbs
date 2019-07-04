@@ -41,42 +41,14 @@ public class AdminController {
 		
 		if (!str.equals("[]")) {
 			map.put("adminList", list.get(0));
-			return "redirect:/admin/index.jsp";//重定向 
+			return "redirect:/admin/all.jsp";//重定向
 		} else {
 
-			return "redirect:/admin/index.jsp";//重定向 
+			return "redirect:/admin/index.jsp";//重定向
 		}
 	}
 	
-	/**
-	 * 管理员注册
-	 * @param admin
-	 * @param map
-	 * @return
-	 */
-	@RequestMapping("/setSignUp")
-	public String setSignUp(Admin admin, Map<Object, Object> map) {
-		
-		if(adminService.getAdminName(admin).toString().equals("[]")) {
-			
-			//调用管理员插入方法
-			adminService.setAdmin(admin);
-			
-			//调用管理员查询方法（获取刚刚注册的管理员信息）
-			list=adminService.getAdmin(admin);
-			
-			map.put("adminList", list.get(0));
-			
-			System.out.println("管理员注册成功");
-			
-			return "admin";
-		}else {
-			
-			System.err.println("管理员注册失败");
-			return "redirect:/admin/index.jsp";//重定向 
-		}
-			
-	}
+
 	
 	/**
 	 * 退出管理员登录

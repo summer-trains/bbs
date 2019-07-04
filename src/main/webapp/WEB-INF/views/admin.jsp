@@ -19,7 +19,7 @@
 	<!-- 管理员页面-主体内容 -->
 	<jsp:include page="/admin/content.jsp"></jsp:include>
 	<!-- 管理员页面-登录、注册 -->
-	<jsp:include page="/admin/login.jsp"></jsp:include>
+	<jsp:include page="/admin/index.jsp"></jsp:include>
 	<!-- 管理员页面-新增帖子 -->
 	<jsp:include page="/admin/plate.jsp"></jsp:include>
 </body>

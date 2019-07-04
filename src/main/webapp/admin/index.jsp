@@ -1,29 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>南生论坛-管理系统</title>
-	<%
-		pageContext.setAttribute("APP_PATH", request.getContextPath());
-	%>
-	<link href="${APP_PATH }/static/img/admin/favicon-admin.ico" rel='icon' type='image/x-icon'/>
+    <title>网站后台管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%
+        pageContext.setAttribute("APP_PATH", request.getContextPath());
+    %>
+    <!--可无视-->
+    <link rel="stylesheet" href="${APP_PATH }/static/css/bootstrap.min.css">
 
-	<link href="${APP_PATH }/static/bootstrap/css/bootstrap.css" rel="stylesheet" />
-	<link href="${APP_PATH }/static/css/base.css" rel="stylesheet" />
+    <!--主要样式-->
+    <link type="text/css" href="${APP_PATH }/static/css/adminstyle.css" rel="stylesheet" />
+
+
 </head>
-<body>
-<!-- 管理员页面-头部 -->
-<jsp:include page="/admin/head.jsp"></jsp:include>
-<!-- 管理员页面-主体内容 -->
-<jsp:include page="/admin/content.jsp"></jsp:include>
-<!-- 管理员页面-登录、注册 -->
-<jsp:include page="/admin/login.jsp"></jsp:include>
-<!-- 管理员页面-新增帖子 -->
-<jsp:include page="/admin/plate.jsp"></jsp:include>
-<!-- 管理员页面-修改帖子 -->
-<jsp:include page="/admin/plateEdit.jsp"></jsp:include>
+<body background="${APP_PATH}/static/img/admin/banner.jpg">
+
+<div class="container" align="center">
+    <div class="col-md-6" style="margin-top: 20%;">
+        <div class="inset">
+            <form name="login" id="login" action="${APP_PATH}/adminController/getLogin" method="post" >
+                <input type="hidden" name="enews" value="login">
+                <div>
+                    <h2>管理员登录</h2>
+                    <span style="text-align: left;text-indent: 0.4em;"><label>用户名</label></span>
+                    <span><input type="text" name="aname" class="textbox" ></span>
+                </div>
+                <div>
+                    <span style="text-align: left;text-indent: 0.4em;"><label>密码</label></span>
+                    <span><input  name="apassword" type="password" class="password"></span>
+                </div>
+                <div class="sign">
+                    <input type="reset"  class="submit" value="重置"/>
+                    <input type="submit" value="登录" class="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

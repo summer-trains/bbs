@@ -24,26 +24,9 @@
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="${APP_PATH }/admin/index.jsp">刷新页面</a>
+					<a class="navbar-brand" href="${APP_PATH }/admin/all.jsp">刷新页面</a>
 				</div>
-				
-				<!-- 判断是否登录，此为未登录时显示内容 -->
-				<c:if test="${empty adminList}">
-					<div class="collapse navbar-collapse pull-right"
-						id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li>
-								<!-- 右上 -->
-								<a class="dropdown-toggle" href="#" style="height: 50px"
-									data-toggle="modal" data-target="#adminLoginModal">
-									<span class="pull-left nav-username">登录</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</c:if>
-				<!-- 判断是否登录，此为登录时显示内容 -->
-				<c:if test="${!empty adminList}">
+
 					<!-- 退出管理员登录 -->
 					<div class="collapse navbar-collapse pull-right"
 						id="bs-example-navbar-collapse-1">
@@ -91,7 +74,7 @@
 							</li>
 						</ul>
 					</div>
-				</c:if>
+				<%--</c:if>--%>
 			</div>
 		</nav>
 	</div>
