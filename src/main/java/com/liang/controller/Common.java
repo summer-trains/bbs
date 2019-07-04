@@ -1,6 +1,7 @@
 package com.liang.controller;
 
 import java.net.InetAddress;
+import java.net.URLDecoder;
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,7 @@ import com.liang.bean.Collect;
 import com.liang.bean.Comment;
 import com.liang.bean.Plate;
 import com.liang.utils.PathUtil;
+
 
 @RequestMapping("/common")
 @SessionAttributes(value = { "plate", "sessionIp" })
@@ -44,6 +46,27 @@ public class Common {
 	VisitController visitController;
 	@Autowired
 	VisitService visitService;
+	@Autowired
+	ArticleService articleService;
+
+
+	//批量将帖子的评论插入到map中，每篇文章对应的评论为一个List,其在map中的键为"listComment"+对应的文章id
+	public void putComment(Map<Object,Object> map,List<Article> articles){
+
+		for(Article i:articles) {
+			// 将每一条帖子对应的id单独抽出来
+			int fid = i.getFid();
+			// 再通过每一个帖子的id查找出对应的评论信息
+			commentService.getCommentFidMap(fid, map);
+			// 将上一步查出的对应的评论信息存放到listComment里
+			List<Comment> listComment = (List<Comment>) map.get("listComment");
+
+			// 为map预设一个随帖子id变化而变化的key
+			String listCommentFid = "listComment_" + fid;
+			// 将每一个帖子下对应的所有评论存入map中（其key是随帖子id变化而变化的）
+			map.put(listCommentFid, listComment);
+		}
+	}
 
 	/**
 	 * 查询输出首页全部信息（不包含head）
@@ -57,6 +80,12 @@ public class Common {
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		articleController.getArticle(map, 1, 10);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");
+
+		//生成文章对应的评论
+		putComment(map,listArticle);
+
+		//以下内容进行整合
+		/*
 		int count = listArticle.size();
 
 		for (int i = 0; i < count; i++) {
@@ -73,12 +102,19 @@ public class Common {
 			// 将每一个帖子下对应的所有评论存入map中（其key是随帖子id变化而变化的）
 			map.put(listCommentFid, listComment);
 		}
+		*/
 		//去除多余信息
 		map.remove("listComment");
 
 		// 查询板块信息（无条件）
 		List<Plate> plate = plateService.getPlate();
 		map.put("plate", plate);
+
+		//查询热门信息
+		 List<Article> hotArticles= articleService.getHotArticles();
+
+		 map.put("hotArticles",hotArticles);
+
 
 		// 查询关注信息(无条件)
 		List<Attention> attention = attentionService.getAttention();
@@ -109,6 +145,12 @@ public class Common {
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		articleController.getArticle(map, pageStart, pageSize);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");
+
+		//生成文章对应的评论
+		putComment(map,listArticle);
+
+		//以下内容整合
+		/*
 		int count = listArticle.size();
 
 		for (int i = 0; i < count; i++) {
@@ -125,6 +167,7 @@ public class Common {
 			// 将每一个帖子下对应的所有评论存入map中（其key是随帖子id变化而变化的）
 			map.put(listCommentFid, listComment);
 		}
+		*/
 		//去除多余信息
 		map.remove("listComment");
 
@@ -164,8 +207,7 @@ public class Common {
 	 * 按帖子标题模糊查询（搜索框搜索）
 	 * 
 	 * @param request
-	 * @param map
-	 * @param map2
+
 	 * @return
 	 */
 	@RequestMapping("/getArticleTitle")
@@ -178,6 +220,11 @@ public class Common {
 		articleController.getArticleTitle(request.getParameter("articleTitle"), map);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");
 
+		//生成文章对应的评论
+		putComment(map,listArticle);
+
+		//以下内容整合
+		/*
 		int count = listArticle.size();
 
 		for (int i = 0; i < count; i++) {
@@ -197,6 +244,8 @@ public class Common {
 			// 再将map存入map2
 			map2.put("map", map);
 		}
+		*/
+		//此处少了一句去除无用信息？？？？？？
 
 		// 查询板块信息（无条件）
 		List<Plate> plate = plateService.getPlate();
@@ -211,13 +260,26 @@ public class Common {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping("/getArticleBname/{bname}")
+	//@RequestMapping("/getArticleBname/{bname}")
+	@RequestMapping("/getArticleBname")
 	@ResponseBody
-	public Map getArticleBname(@PathVariable String bname, HttpServletRequest request) {
-		System.out.println("进入板块查询主层");
+	//public Map getArticleBname(@PathVariable String bname, HttpServletRequest request) {
+	public Map getArticleBname(HttpServletRequest request) {
+		String bname=request.getParameter("plateName");
+		System.out.println("进入板块查询主层:"+bname);
+		System.out.println("对板块名进行解码");
+
+
+		//System.out.println("解码后字符串:"+bname);
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		articleController.getArticleBname(bname, map);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");
+
+		//生成文章对应的评论
+		putComment(map,listArticle);
+
+		//以下内容进行整合
+		/*
 		int count = listArticle.size();
 
 		for (int i = 0; i < count; i++) {
@@ -234,9 +296,17 @@ public class Common {
 			// 将每一个帖子下对应的所有评论存入map中（其key是随帖子id变化而变化的）
 			map.put(listCommentFid, listComment);
 		}
+		*/
 		//去除多余信息
 		map.remove("listComment");
 
+		/*
+		查询 热门帖子
+		 */
+
+		//List<Article> hotArticles=articleService.getHotArticles();
+
+		//map.put("hotArticles",hotArticles);
 		// 查询板块信息（无条件）
 		List<Plate> plate = plateService.getPlate();
 		map.put("plate", plate);

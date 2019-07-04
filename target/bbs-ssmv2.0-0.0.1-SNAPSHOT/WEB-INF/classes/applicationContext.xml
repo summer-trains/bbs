@@ -40,6 +40,20 @@
 		<property name="dataSource" ref="dataSource" />
 		<!-- 指定mybatis，mapper文件的位置 -->
 		<property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+
+		<!--设置pagehelper -->
+		<property name="plugins">
+			<array>
+				<bean class="com.github.pagehelper.PageInterceptor">
+					<property name="properties">
+						<props>
+							<prop key="helperDialect">mysql</prop>
+							<prop key="resonable">true</prop>
+						</props>
+					</property>
+				</bean>
+			</array>
+		</property>
 	</bean>
 
 	<!-- 配置扫描器，将mybatis接口的实现加入到ioc容器中 -->
@@ -48,6 +62,8 @@
 		<property name="basePackage" value="com.liang.dao"></property>
 	</bean>
 	<!--================== 配置和MyBatis的整合-end=============== -->
+
+
 
 
 	<!-- ===============事务控制的配置 ================ -->

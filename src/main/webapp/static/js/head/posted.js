@@ -1,7 +1,12 @@
 //发帖-展示
+//用于显示发帖的各个输入框，如标题，内容等，并获取所有板块
+//输入框中有填充表单，表单提交给/articleController/setArticle
+///"plateController/getPlate2"
+//表单提交：/articleController/setArticle
 function postedShow() {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
+    alert("填充函数执行");
     $.ajax({
         //几个参数需要注意一下
         url: "plateController/getPlate2",//url

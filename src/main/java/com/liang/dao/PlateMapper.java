@@ -26,6 +26,10 @@ public interface PlateMapper {
     //修改板块
     int updateByPrimaryKey(Plate record);
 
+    //由于外键设置失误，在修改板块后手动修改对应的文章记录
+    int updateArticleByPrimaryKey(Plate record);
+
+
     //总板块数
     int selectCount();
 }

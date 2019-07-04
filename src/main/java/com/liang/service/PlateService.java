@@ -53,6 +53,7 @@ public class PlateService {
 	public void updatePlate(Plate plate) {
 		
 		plateMapper.updateByPrimaryKey(plate);
+		plateMapper.updateArticleByPrimaryKey(plate);
 	}
 
 	/**

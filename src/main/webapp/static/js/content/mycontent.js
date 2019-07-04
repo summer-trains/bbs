@@ -1,4 +1,5 @@
 //个人主页展示 js函数，包括完整的首页展示代码
+//"userController/getMyself"
 $(function () {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
@@ -92,11 +93,12 @@ $(function () {
                 var myself_article_update = "";
                 var myself_article_del = "";
 
+                //修改了发帖状态
                 /*审核状态*/
                 if (article["status"] == 0){ //待审核状态
                     myself_article_status = '<small class="btn-warning">待审核。。。</small>';
                 } else if (article["status"] == 1){ //审核通过状态
-                    myself_article_status = '<small class="text-success"><b>审核通过</b></small>';
+                    // myself_article_status = '<small class="text-success"><b>发帖成功</b></small>';
                 } else if (article["status"] == 2){ //审核未通过状态
                     myself_article_status = '<small class="btn-danger">审核未通过</small>';
                 }
@@ -176,7 +178,7 @@ $(function () {
                     '<div class="row">' +
                         '<div class="col-xs-7 col-md-6">' +
                             '<!-- 帖子审核状态 -->' +
-                            '<small>审核状态：</small>' +
+                            '<small帖子状态：</small>' +
                             '<!-- 审核状态显示 -->' +
                             '<span id="myself_article_status">'+myself_article_status+'</span>' +
                         '</div>' +

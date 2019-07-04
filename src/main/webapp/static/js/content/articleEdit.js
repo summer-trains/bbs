@@ -1,8 +1,9 @@
 //帖子-修改(回显)
+//"articleController/getUpdateArticle",
 function setArticleEdit(fid) {
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
-    var APicPath='<%= session.getAttribute("APicPath")%>';
+   // var APicPath='<%= session.getAttribute("APicPath")%>';
    // alert(APicPath);
     $.ajax({
         //几个参数需要注意一下
@@ -11,6 +12,7 @@ function setArticleEdit(fid) {
         url: "articleController/getUpdateArticle",//url
         data: $('#form_articleUpdate_' + fid).serialize(),
         success: function (data) {
+            alert("修改帖子回显函数测试");
             var article_Edit_all = "";
             var article = data["article_Edit"];
             //帖子所属板块
@@ -30,23 +32,23 @@ function setArticleEdit(fid) {
             var article_Edit_photo = "";
             if (article["photo"] == "photo") {  //无配图
                 article_Edit_photo =
+                   // '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
+                    //'src="'+ '<%= session.getAttribute("APicPath")%>' +" onclick="$(\'#f_previewImg_up\').click();">';
                     '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                    'src="'+ '<%= session.getAttribute("APicPath")%>' +" onclick="$(\'#f_previewImg_up\').click();">';
-                    //'<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                   // 'src="'+ APP_PATH +'/static/img/fatiePhoto.png" onclick="$(\'#f_previewImg_up\').click();">';
+                   'src="'+ APP_PATH +'/static/img/fatiePhoto.png" onclick="$(\'#f_previewImg_up\').click();">';
             } else {
                 if (article["photo"].endsWith(".mp4") |article["photo"].endsWith(".avi")){
                     article_Edit_photo =
-                        //'<video style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                        //'src="'+'<%= session.getAttribute("APicPath")%>' +article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();"></video>';
+                     //   '<video style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
+                     //   'src="'+'<%= session.getAttribute("APicPath")%>' +article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();"></video>';
                         '<video style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
                        'src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();"></video>';
                 } else {
                     article_Edit_photo =
-                      //  '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
+                     //   '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
                       //   'src="'+ '<%= session.getAttribute("APicPath")%>'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();">';
                        '<img style="position: relative; width: 50%; height: 50%;" id="f_imghead_up"' +
-                        'src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();">';
+                    'src="'+ APP_PATH +'/static/upload/article/'+article["photo"]+'" onclick="$(\'#f_previewImg_up\').click();">';
                 }
             }
 
@@ -92,7 +94,9 @@ function setArticleEdit(fid) {
 }
 
 //帖子-修改
+//"articleController/updateArticle"
 function updateArticle() {
+
     var APP_PATH = document.getElementById("APP_PATH").value;
     var userid = document.getElementById("session_userid").value;
 

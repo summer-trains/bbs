@@ -20,7 +20,8 @@ public class Article {
     private String username;
 
     private Integer status;
-    
+
+    //在article2上新增sum，表示总评论数
     private String sum;
     
     private String userphoto;

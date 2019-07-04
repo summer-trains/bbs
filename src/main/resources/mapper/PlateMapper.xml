@@ -178,4 +178,9 @@
     set bname = #{bname,jdbcType=VARCHAR}
     where bid = #{bid,jdbcType=INTEGER}
   </update>
+  <update id="updateArticleByPrimaryKey" parameterType="com.liang.bean.Plate">
+    update article
+    set article.bname = #{bname,jdbcType=VARCHAR}
+    WHERE article.bname=(SELECT plate.bname FROM plate WHERE plate.bid = #{bid,jdbcType=INTEGER})
+  </update>
 </mapper>

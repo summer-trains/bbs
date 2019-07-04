@@ -85,6 +85,16 @@
 	limit #{offset},#{limit}
   </select>
 
+  <!-- 查询热门帖子，按照帖子评论数作为标准） -->
+  <select id="selectHotArticle" parameterType="com.liang.bean.Article" resultMap="BaseResultMap">
+    select
+    a.fid, a.titles, a.fcontent, a.photo, a.bname, a.time, a.userid, a.username, a.status,count(c.pid) as sum,v.photo userphoto
+    from article a left join comment c on a.fid=c.fid left join via v on a.userid=v.userid
+    where status = 1
+	group by fid
+	order by sum desc
+  </select>
+
   <!-- 查询发帖表信息（分页）-管理员 -->
   <select id="selectByArticleAdmin" parameterType="java.util.Map" resultMap="BaseResultMap">
     select

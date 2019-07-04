@@ -178,7 +178,7 @@ $(function () {
                     for (var j = 0; j < comments.length; j++){
                         var comment = comments[j];
                         comment_traversals = comment_traversals +
-                            '<a class="a_p" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
+                            '<a class="a_pp" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
                             '<!-- 评论者姓名 -->' +
                             '<b>'+comment["name"]+'</b>' +
                             '</a>' +

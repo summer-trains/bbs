@@ -30,5 +30,6 @@
 	</div>
 	
 	<script src="${APP_PATH }/static/js/images_update.js"></script>
+	<!--script src="${APP_PATH}/static/js/content/articleEdit.js"></script-->
 </body>
 </html>

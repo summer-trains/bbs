@@ -82,4 +82,8 @@ public class CommentService {
 	public int getCountFid(int fid) {
 		return commentMapper.selectByCountFid(fid);
 	}
+
+	/*
+	批量查询帖子对应的评论并
+	 */
 }
