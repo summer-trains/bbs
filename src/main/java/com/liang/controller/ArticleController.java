@@ -61,8 +61,9 @@ public class ArticleController {
 		String Sense="";
 		//获取敏感词
 		while(iterator.hasNext()){
-			Sense=Sense+" ; "+iterator.next();
+			Sense=Sense+"   "+iterator.next();
 		}
+		System.out.println("后台敏感词检测结果："+Sense);
 
 		String projectname;	//项目名称
 		projectname = request.getSession().getServletContext().getRealPath("/");
@@ -131,6 +132,7 @@ public class ArticleController {
 		else{
 			//设置敏感词汇属性
 			request.getSession().setAttribute("SenseWord",Sense);
+			System.out.println("设置返回Session");
 
 			article.setStatus(0);
 		}
@@ -280,12 +282,7 @@ public class ArticleController {
 		
 		return map;
 	}
-	
-	/**
-	 * 修改帖子表
-	 * @return
-	 * @throws IOException 
-	 */
+
 
 	//去掉字符串中中文字符
 	public String subStrForMath(String str){
@@ -301,7 +298,11 @@ public class ArticleController {
 		return string;
 	}
 
-
+	/**
+	 * 修改帖子表
+	 * @return
+	 * @throws IOException
+	 */
 	@RequestMapping("/updateArticle")
 	@ResponseBody
 	public Map updateArticle(@RequestParam("photo") MultipartFile file, Article2 article2,HttpServletRequest request) {
@@ -316,8 +317,13 @@ public class ArticleController {
 				projectname = projectname.substring(projectname.lastIndexOf("/"),projectname.length());
 			}
 
+			//原始
 			//文件（图片）路径
-			String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
+			//String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
+
+
+			//修改文件（图片（路径
+			String filePath=PicPaths.PicPath;
 
 			int fid=article2.getFid();
 
@@ -438,6 +444,17 @@ public class ArticleController {
 
 		return map;
 	}
+
+	/*
+
+	public Map getHotArticles(){
+		Map<Object,Object> map=new HashMap<Object, Object>();
+		List<Article> articles=articleService.getHotArticles();
+		map.put("hotArticle",articles);
+		return map;
+	}
+
+	*/
 
 	
 }

@@ -140,4 +140,11 @@ public class ArticleService {
     public int getCount() {
     	return articleMapper.selectCount();
     }
+
+    /*
+    获取热门文章
+     */
+    public List<Article> getHotArticles(){
+    	return articleMapper.selectHotArticle();
+	}
 }

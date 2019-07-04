@@ -4,6 +4,7 @@ import com.liang.bean.Article;
 import java.util.List;
 import java.util.Map;
 
+import com.liang.bean.Article2;
 import org.apache.ibatis.annotations.Param;
 
 public interface ArticleMapper {
@@ -50,4 +51,7 @@ public interface ArticleMapper {
 
 	//总帖数
     int selectCount();
+
+    //获取热门文章
+    List<Article> selectHotArticle();
 }
