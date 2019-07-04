@@ -55,7 +55,7 @@ public class Common {
 	public Map getAll(Map<Object, Object> map2, HttpServletRequest request, HttpSession session) {
 
 		Map<Object, Object> map = new HashMap<Object, Object>();
-		articleController.getArticle(map, 1, 10);
+		articleController.getArticle(map, 1, 5);
 		List<Article> listArticle = (List<Article>) map.get("listArticle");
 		int count = listArticle.size();
 

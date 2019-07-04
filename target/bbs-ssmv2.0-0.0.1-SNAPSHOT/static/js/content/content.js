@@ -49,7 +49,7 @@ $(function () {
                     //帖子发布者头像信息
                     var head_png;
                     if (article["userphoto"] == null) {
-                        head_png = '<img class="img_head" alt="Brand" src=' + APP_PATH + '/static/img/head.png>';
+                        head_png = '<img class="img_head" alt="Brand" src=' + APP_PATH + '/static/img/jianshu-logo.png>';
                     } else {
                         head_png = '<img class="img_head" alt="Brand" src=' + APP_PATH + '/static/upload/user/' + article["userphoto"] + '>';
                     }
@@ -72,7 +72,7 @@ $(function () {
                             //判断该帖子对应的用户是否被关注，如果是，则将“true”保存到"attention_record"中
                             if (attention["userid"] == userid && attention["beuserid"] == article["userid"]) {
                                 form_attention =
-                                    '<form id="form_attentionDel_'+article["fid"]+'" method="post">' +
+                                    '<form id="form_attentionDel_"'+article["fid"]+' method="post">' +
                                         '<input type="hidden" name="gid" value=' + attention["gid"] + '>' +
                                         '<div class="attention_content">' +
                                             '<a href="javascript:void(0)">' +
@@ -92,7 +92,7 @@ $(function () {
                                     '<input type="hidden" name="userid" value="' + userid + '">' +
                                     '<input type="hidden" name="beuserid" value="' + article["userid"] + '">' +
                                     '<button type="button" onclick="attentionAdd('+article["fid"]+","+article["userid"]+","+userid+')" class="btn btn-info btn-sm">' +
-                                        '<samp class="glyphicon glyphicon-plus"></samp> 关注她' +
+                                        '<samp class="glyphicon glyphicon-plus"></samp> 关注' +
                                     '</button>' +
                                 '</form>';
                         }
@@ -100,7 +100,7 @@ $(function () {
 
                     listArticle_titles = article["titles"];
 
-                    listArticle_fcontent = article["fcontent"];
+                    listArticle_fcontent = article["fcontent"].substr(0, 100) + "......";
 
                     //帖子配图
                     if (article["photo"] != "photo"){
@@ -114,7 +114,8 @@ $(function () {
                     }
 
                     //评论数
-                    listArticle_sum = article["sum"] + " 条评论";
+                    var listArticle_sum1 = article["sum"] + " 条评论";
+                    listArticle_sum = "<span class=\"glyphicon glyphicon-comment\"> " + article["sum"] + "</span>";
 
                     // 用户登录后才显示心形收藏 && 如果不是登录用户本人所发帖子，则显示心形收藏
                     if (userid != "" && article["userid"] != userid){
@@ -175,7 +176,7 @@ $(function () {
                     for (var j = 0; j < comments.length; j++){
                         var comment = comments[j];
                         comment_traversals = comment_traversals +
-                            '<a class="a_p" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
+                            '<a class="nickname" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
                             '<!-- 评论者姓名 -->' +
                             '<b>'+comment["name"]+'</b>' +
                             '</a>' +
@@ -248,17 +249,17 @@ $(function () {
                         '</div>' +
                         '</div>' +
                         '' +
-                        '<!--评论框-->' +
-                        '<div class="row" style="position: relative; margin-top: 10px;">' +
-                        '<div class="col-xs-12 col-md-12" id="comment_box">'+comment_box+'</div>' +
-                        '</div>' +
+                        // '<!--评论框-->' +
+                        // '<div class="row" style="position: relative; margin-top: 10px;">' +
+                        // '<div class="col-xs-12 col-md-12" id="comment_box">'+comment_box+'</div>' +
+                        // '</div>' +
                         '' +
-                        '<!--评论展示-->' +
-                        '<hr style="position: relative; margin-top: 5px;">' +
-                        '<div class="row" style="position: relative; margin-top: -10px;">' +
-                        '<!--评论展示-->' +
-                        '<div class="col-md-12" id="comment_traversals'+article["fid"]+'">'+comment_traversals+'</div>' +
-                        '</div>' +
+                        // '<!--评论展示-->' +
+                        // '<hr style="position: relative; margin-top: 5px;">' +
+                        // '<div class="row" style="position: relative; margin-top: -10px;">' +
+                        // '<!--评论展示-->' +
+                        // '<div class="col-md-12" id="comment_traversals'+article["fid"]+'">'+comment_traversals+'</div>' +
+                        // '</div>' +
                         '' +
                         '<br>' +
                         '<div class="row">' +
@@ -271,10 +272,11 @@ $(function () {
             $("#articles_all").html(articles_all);
 
             /*加载更多*/
-            var pageStart = data["pageStart"] + 1
+            var pageStart = data["pageStart"] + 1;
+            var appendMore1 = '<button onclick="appendMore('+pageStart+')" class="btn btn-primary btn-lg btn-block">加载更多</button>';
             var appendMore =
                 '<a class="text-info" href="javascript:void(0)" onClick="appendMore('+pageStart+')">点击--->加载更多</a>';
-            $("#appendMore").html(appendMore);
+            $("#appendMore").html(appendMore1);
 
 
             //此处进行循环展示-板块
@@ -292,7 +294,9 @@ $(function () {
                 plates_all = plates_all +
                     '<div class="col-xs-4 col-md-4">' +
                         '<a href="#" onclick=getBid("'+plate["bname"]+'") >' +
+                            // '<img class="img_right_logo_bankuai" src="' + APP_PATH + '/static/img/'+plate["bname"] + '.png">' +
                             '<img class="img_right_logo_bankuai" src="' + APP_PATH + '/static/img/houtai.png">' +
+                            // '<p'+'class="text-center"'+'>'+plate["bname"]+'</p>' +
                             '<p>'+plate["bname"]+'</p>' +
                         '</a>' +
                     '</div>' + br;
@@ -317,85 +321,9 @@ $(function () {
                 }
             }
             $("#hotArticle_all").html(hotArticle_all);
-
-
-            //统计访问信息-国家
-            var visitCountrys = data["visitCountryCount"];
-            var countrys = new Array();//地址
-            var country_count = new Array()//个数
-            for (var i=0;i<visitCountrys.length;i++){
-                var visitCountry = visitCountrys[i];
-                countrys.push(visitCountry["visitcountry"]);
-                country_count.push({"value":visitCountry["count"], "name":visitCountry["visitcountry"]})
-            }
-            var myCharts1 = echarts.init(document.getElementById('visit_country'));
-            option = {
-                title : {
-                    text: '按国家统计',
-                    x:'center'
-                },
-                tooltip : {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
-                legend: {
-                    x : 'center',
-                    y : 'bottom',
-                    data:countrys
-                },
-                calculable : true,
-                series : [
-                    {
-                        name:'面积模式',
-                        type:'pie',
-                        radius : [6, 75],
-                        center : ['49%', 150],
-                        roseType : 'area',
-                        x: '50%',               // for funnel
-                        max: 40,                // for funnel
-                        sort : 'ascending',     // for funnel
-                        data:country_count
-                    }
-                ]
-            };
-            myCharts1.setOption(option);
-
-            //统计访问信息-中国省份
-            var visitProvinces = data["visitProvinceCount"];
-            var provinces = new Array();//地址
-            var province_count = new Array()//个数
-            for (var i=0;i<visitProvinces.length;i++){
-                var visitProvince = visitProvinces[i];
-                provinces.push(visitProvince["visitprovince"]);
-                province_count.push({"value":visitProvince["count"], "name":visitProvince["visitprovince"]})
-            }
-            var myCharts2 = echarts.init(document.getElementById('visit_province'));
-            option2 = {
-                title : {
-                    text: '按中国省份统计',
-                    x:'center'
-                },
-                tooltip : {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
-                calculable : true,
-                series : [
-                    {
-                        name:'面积模式',
-                        type:'pie',
-                        radius : '55%',
-                        center: ['51%', '60%'],
-                        data: province_count
-                    }
-                ]
-            };
-            myCharts2.setOption(option2);
-
         },
         error : function() {
             layer.msg("异常！",{icon: 5});
         }
-
     });
 });

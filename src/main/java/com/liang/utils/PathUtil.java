@@ -9,8 +9,9 @@ public class PathUtil {
 	
 	public static String getCommonPath() {
 		
-		serverPath=System.getProperty("catalina.home");
-		commonPath = serverPath +PropertyUtil.getPropertiesPath().getProperty("webapps");
+//		serverPath=System.getProperty("catalina.home");
+		serverPath = "E:/bbs-ssmv2.0_admin/bbs-ssmv2.0_admin/src/main";
+		commonPath = serverPath +PropertyUtil.getPropertiesPath().getProperty("webapp");
 		return commonPath;
 	}
 	

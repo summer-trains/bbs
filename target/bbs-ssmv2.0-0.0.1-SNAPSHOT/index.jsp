@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>南生论坛-首页</title>
+<title>简书-简单你的创作</title>
 	<%
 		pageContext.setAttribute("APP_PATH", request.getContextPath());
 	%>

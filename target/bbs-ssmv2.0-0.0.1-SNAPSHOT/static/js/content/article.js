@@ -47,7 +47,7 @@ function getFid(fid) {
                 //帖子发布者头像信息
                 var head_png;
                 if (article["userphoto"] == null) {
-                    head_png = '<img class="img_head" alt="Brand" src=' + APP_PATH + '/static/img/head.png>';
+                    head_png = '<img class="img_head" alt="Brand" src=' + APP_PATH + '/static/img/jianshu-logo.png>';
                 } else {
                     head_png = '<img class="img_head" alt="Brand" src=' + APP_PATH + '/static/upload/user/' + article["userphoto"] + '>';
                 }
@@ -90,7 +90,7 @@ function getFid(fid) {
                             '<input type="hidden" name="userid" value="' + userid + '">' +
                             '<input type="hidden" name="beuserid" value="' + article["userid"] + '">' +
                             '<button type="button" onclick="attentionAdd('+article["fid"]+","+article["userid"]+","+userid+')" class="btn btn-info btn-sm">' +
-                            '<samp class="glyphicon glyphicon-plus"></samp> 关注她' +
+                            '<samp class="glyphicon glyphicon-plus"></samp> 关注' +
                             '</button>' +
                             '</form>';
                     }
@@ -112,7 +112,9 @@ function getFid(fid) {
                 }
 
                 //评论数
-                listArticle_sum = article["sum"] + " 条评论";
+                // listArticle_sum = article["sum"] + " 条评论";
+                listArticle_sum = "<span class=\"glyphicon glyphicon-comment\"> " + article["sum"] + "</span>";
+
 
                 // 用户登录后才显示心形收藏 && 如果不是登录用户本人所发帖子，则显示心形收藏
                 if (userid != "" && article["userid"] != userid){
@@ -173,7 +175,7 @@ function getFid(fid) {
                 for (var j = 0; j < comments.length; j++){
                     var comment = comments[j];
                     comment_traversals = comment_traversals +
-                        '<a class="a_p" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
+                        '<a class="nickname" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
                         '<!-- 评论者姓名 -->' +
                         '<b>'+comment["name"]+'</b>' +
                         '</a>' +

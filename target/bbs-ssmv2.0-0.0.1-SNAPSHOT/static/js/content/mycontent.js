@@ -46,7 +46,7 @@ $(function () {
             $("#myself_email").html(myself_email);
 
             //性别年龄
-            myself_sex_age = user["sex"] + "、" +user["age"];
+            myself_sex_age = user["sex"] + ", " +user["age"];
             $("#myself_sex_age").html(myself_sex_age);
 
 
@@ -149,7 +149,7 @@ $(function () {
                         '<hr style="position: relative; margin-top: 2px;height:1px;border:none;border-top:1px dashed #dddddd;">' +
                         '<div class="row" style="position: relative; margin-top: -10px;">' +
                             '<div class="col-xs-9 col-md-11">' +
-                                '<a href="'+ APP_PATH +'/userController/getOthers?userid='+comment["userid"]+'" class="a_p">' +
+                                '<a href="'+ APP_PATH +'/userController/getOthers?userid='+comment["userid"]+'" class="nickname">' +
                                 '<!-- 评论者姓名 -->' +
                                 '<b>'+comment["name"]+'</b>' +
                                 '</a>' +
@@ -261,7 +261,7 @@ $(function () {
                             '<hr style="position: relative; margin-top: 2px;height:1px;border:none;border-top:1px dashed #dddddd;">' +
                             '<div class="row" style="position: relative; margin-top: -10px;">' +
                                 '<div class="col-xs-10 col-md-11">' +
-                                '<a href="'+APP_PATH+'/userController/getOthers?userid='+huifu_comment["userid"]+'" class="a_p">' +
+                                '<a href="'+APP_PATH+'/userController/getOthers?userid='+huifu_comment["userid"]+'" class="nickname">' +
                                 '<!-- 评论者姓名 -->' +
                                 '<b>'+huifu_comment["name"]+'</b>' +
                                 '</a>' +
@@ -347,7 +347,7 @@ $(function () {
                                 '<a href="'+APP_PATH+'/userController/getOthers?userid='+myAttention["userid"]+'">'+myAttention_userphoto+'</a>' +
                             '</div>' +
                             '<div class="col-xs-5 col-md-8">' +
-                                '<a class="a_b" href="'+APP_PATH+'/userController/getOthers?userid='+myAttention["userid"]+'">' +
+                                '<a class="nickname" href="'+APP_PATH+'/userController/getOthers?userid='+myAttention["userid"]+'">' +
                                     '<!-- 发帖人名字 -->' +
                                     '<b style="font-size: 16px;">'+myAttention["name"]+'</b>' +
                                 '</a>' +
@@ -402,7 +402,7 @@ $(function () {
                                 '<a href="'+APP_PATH+'/userController/getOthers?userid='+myAttention_be["userid"]+'">'+myAttention_be_userphoto+'</a>' +
                             '</div>' +
                             '<div class="col-xs-9 col-md-8">' +
-                                '<a class="a_b" href="'+APP_PATH+'/userController/getOthers?userid='+myAttention_be["userid"]+'">' +
+                                '<a class="nickname" href="'+APP_PATH+'/userController/getOthers?userid='+myAttention_be["userid"]+'">' +
                                     '<!-- 发帖人名字 -->' +
                                     '<b style="font-size: 16px;">'+myAttention_be["name"]+'</b>' +
                                 '</a>' +

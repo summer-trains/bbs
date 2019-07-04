@@ -3,7 +3,7 @@ function appendMore(pageStart) {
 	var userid = document.getElementById("session_userid").value;
 
 	$.ajax({
-		url: "common/appendMore?pageStart="+pageStart,
+		url: "common/appendMore?pageStart="+pageStart+"&pageSize=5",
 		type: "post",
 		dataType: "json",
 		success: function (data) {
@@ -100,7 +100,7 @@ function appendMore(pageStart) {
 
 					listArticle_titles = article["titles"];
 
-					listArticle_fcontent = article["fcontent"];
+					listArticle_fcontent = article["fcontent"].substr(0, 100) + "......";
 
 					//帖子配图
 					if (article["photo"] != "photo"){
@@ -114,7 +114,8 @@ function appendMore(pageStart) {
 					}
 
 					//评论数
-					listArticle_sum = article["sum"] + " 条评论";
+					// listArticle_sum = article["sum"] + " 条评论";
+					listArticle_sum = "<span class=\"glyphicon glyphicon-comment\"> " + article["sum"] + "</span>";
 
 					// 用户登录后才显示心形收藏 && 如果不是登录用户本人所发帖子，则显示心形收藏
 					if (userid != "" && article["userid"] != userid){
@@ -175,7 +176,7 @@ function appendMore(pageStart) {
 					for (var j = 0; j < comments.length; j++){
 						var comment = comments[j];
 						comment_traversals = comment_traversals +
-							'<a class="a_p" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
+							'<a class="nickname" href=' + APP_PATH + '/userController/getOthers?userid='+comment["userid"]+'>' +
 							'<!-- 评论者姓名 -->' +
 							'<b>'+comment["name"]+'</b>' +
 							'</a>' +
@@ -248,18 +249,18 @@ function appendMore(pageStart) {
 						'</div>' +
 						'</div>' +
 						'' +
-						'<!--评论框-->' +
-						'<div class="row" style="position: relative; margin-top: 10px;">' +
-						'<div class="col-xs-12 col-md-12" id="comment_box">'+comment_box+'</div>' +
-						'</div>' +
+						// '<!--评论框-->' +
+						// '<div class="row" style="position: relative; margin-top: 10px;">' +
+						// '<div class="col-xs-12 col-md-12" id="comment_box">'+comment_box+'</div>' +
+						// '</div>' +
 						'' +
-						'<!--评论展示-->' +
-						'<hr style="position: relative; margin-top: 5px;">' +
-						'<div class="row" style="position: relative; margin-top: -10px;">' +
-						'<!--评论展示-->' +
-						'<div class="col-md-12" id="comment_traversals'+article["fid"]+'">'+comment_traversals+'</div>' +
-						'</div>' +
-						'' +
+						// '<!--评论展示-->' +
+						// '<hr style="position: relative; margin-top: 5px;">' +
+						// '<div class="row" style="position: relative; margin-top: -10px;">' +
+						// '<!--评论展示-->' +
+						// '<div class="col-md-12" id="comment_traversals'+article["fid"]+'">'+comment_traversals+'</div>' +
+						// '</div>' +
+						// '' +
 						'<br>' +
 						'<div class="row">' +
 						'<div class="col-md-12" style="position: relative; background-color: #f6f6f6; height: 10px;"></div>' +
@@ -275,12 +276,12 @@ function appendMore(pageStart) {
 			//没有更多
 			if(articles == null || articles == ""){
 				appendMore =
-					'<small class="text-warning">已加载全部帖子...</small>';
+					'<button class="btn btn-primary btn-lg btn-block">已加载全部帖子</button>';
 			} else {
 				/*加载更多*/
-				var pageStart = data["pageStart"] + 1
+				var pageStart = data["pageStart"] + 1;
 				appendMore =
-					'<a class="text-info" href="javascript:void(0)" onClick="appendMore('+pageStart+')">点击--->加载更多</a>';
+					'<button onclick="appendMore('+pageStart+')" class="btn btn-primary btn-lg btn-block">加载更多</button>';
 			}
 			$("#appendMore").html(appendMore);
 

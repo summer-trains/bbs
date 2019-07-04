@@ -218,7 +218,7 @@ function updateArticle() {
                                     '<hr style="position: relative; margin-top: 2px;height:1px;border:none;border-top:1px dashed #dddddd;">' +
                                     '<div class="row" style="position: relative; margin-top: -10px;">' +
                                     '<div class="col-xs-9 col-md-11">' +
-                                    '<a href="'+ APP_PATH +'/userController/getOthers?userid='+comment["userid"]+'" class="a_p">' +
+                                    '<a href="'+ APP_PATH +'/userController/getOthers?userid='+comment["userid"]+'" class="nickname">' +
                                     '<!-- 评论者姓名 -->' +
                                     '<b>'+comment["name"]+'</b>' +
                                     '</a>' +

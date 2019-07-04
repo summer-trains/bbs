@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -108,7 +109,7 @@ public class ArticleController {
 	 */
 	@RequestMapping("/getArticle")
 	@ResponseBody
-	public Map getArticle(Map<Object, Object> map, @RequestParam(required=true,defaultValue="1") int pageStart, @RequestParam(required=true,defaultValue="10")int pageSize) {
+	public Map getArticle(Map<Object, Object> map, @RequestParam(required=true,defaultValue="1") int pageStart, @RequestParam(required=true,defaultValue="5")int pageSize) {
 		Map<Object, Object> map2 = new HashMap<Object, Object>();
 		List<Article> listArticle = articleService.getArticle(pageStart, pageSize);
 		map.put("listArticle", listArticle);
@@ -258,8 +259,11 @@ public class ArticleController {
 			}
 
 			//文件（图片）路径
-			String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
-
+			String filePath = PathUtil.getCommonPath() + PathUtil.getArticlePath();
+//			String filePath = PathUtil.getCommonPath()+projectname+PathUtil.getArticlePath();
+//			String test = System.getProperty("user.dir");
+//			String filePath = test + "/static/upload/article/";
+//			filePath = "E:/bbs-ssmv2.0_admin/bbs-ssmv2.0_admin/src/main/webapp/static/upload/article";
 			int fid=article2.getFid();
 
 			// 获取上传图片的文件名及其后缀(获取原始图片的拓展名)

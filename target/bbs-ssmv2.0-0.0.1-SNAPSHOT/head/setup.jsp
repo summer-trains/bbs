@@ -47,7 +47,7 @@
                         
                         <div class="form-group">
                         	<div class="row">
-	                            <label for="password" class="col-sm-2 control-label">密码</label>
+	                            <label for="setup_password_id" class="col-sm-2 control-label">密码</label>
 	                            <div class="col-sm-10">
 	                            	<p class="form-control-static">*********
 	                            		<a href="#" id="setup_password_on" class="text-success"><b>修改</b></a>

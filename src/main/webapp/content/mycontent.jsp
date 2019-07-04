@@ -23,7 +23,7 @@
 			<div class="row">
 				<div>
 					<img style="position: relative; width: 100%; height: 280px; border-top-left-radius: 2px; border-top-right-radius: 2px;"
-						src="${APP_PATH }/static/img/beijing.jpg">
+						src="${APP_PATH }/static/img/calmfox.png">
 				</div>
 			</div>
 			<div class="row">
@@ -35,7 +35,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<!-- 用户名 -->
-							<b id="myself_name" style="font-size: 22px;"></b> &nbsp;&nbsp;&nbsp; <span>克己复礼</span>
+							<b id="myself_name" style="font-size: 22px;"></b> &nbsp;&nbsp;&nbsp;
 						</div>
 					</div>
 					<br>
